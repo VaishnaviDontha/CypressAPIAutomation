@@ -38,10 +38,10 @@ const dataJson = require('../../fixtures/createUser')
             expect(res.body.data).has.property('gender', dataJson.gender)
         }).then((res)=>{
             
-            const userId = res.body.data.id
+            const userID = res.body.data.id
             cy.request({
                 method : 'GET',
-                url : 'https://gorest.co.in/public/v1/users/'+userId,
+                url : 'https://gorest.co.in/public/v1/users/'+userID,
                 headers: {
                     'Authorization' : "Bearer " + accessToken
                 },
@@ -52,7 +52,7 @@ const dataJson = require('../../fixtures/createUser')
                 expect(res.body.data).has.property('name',dataJson.name )
                 expect(res.body.data).has.property('status', dataJson.status)
                 expect(res.body.data).has.property('gender', dataJson.gender)
-                expect(res.body.data).has.property('id', userId)
+                expect(res.body.data).has.property('id', userID)
             })
         })
     })
