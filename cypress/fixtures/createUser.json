@@ -1,0 +1,6 @@
+{
+    "name": "Test ",
+    "email": "test@cypress.io",
+    "gender": "male",
+    "status" : "active"    
+}
